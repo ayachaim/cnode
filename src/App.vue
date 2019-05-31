@@ -2,7 +2,7 @@
   <div id="app">
     <Header></Header>
     <div class="warpper">
-      <PostList></PostList>
+      <router-view name="main"></router-view>
     </div>
   </div>
 </template>
@@ -28,8 +28,8 @@ export default {
   background-color: #e1e1e1;
 }
 .warpper{
-  width:80%;
-  height:80%;
+  width:90%;
+  height:90%;
   margin:0 auto;
 
 }

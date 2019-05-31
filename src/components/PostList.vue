@@ -28,10 +28,11 @@
               {{  post | tabFormat}}
             </span>
           </span>
-
+          <router-link :to="{name:'request_content',params:{id:post.id}}">
           <span class="title">
             {{post.title}}
           </span>
+          </router-link>
           <span class="time">
             {{post.last_reply_at | formatDate}}
           </span>
@@ -52,9 +53,9 @@ export default {
   },
   methods: {
     getData () {
-      this.$http.get('https://cnodejs.org/api/v1/topics', {
+      this.$http.get(`https://cnodejs.org/api/v1/topics`, {
         page: 1,
-        linit: 15
+        limit: 15
       })
         .then(res => {
           this.isLoading = false
@@ -130,6 +131,7 @@ border-radius: 1px;
   text-overflow:ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  text-decoration:none;
 
 }
 .wapper_li{
