@@ -14,6 +14,9 @@
     </div>
     <div v-html="post.content" class="post_content">
     </div>
+    <br>
+    <hr>
+    <br>
     <div id="reply">
       <div class="topbar">回复</div>
       <div v-for="(reply,index)  in post.replies" class="replySec">
@@ -77,13 +80,14 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 @import url('../assets/markdown-github');
 .warpper_content{
   background-color:white;
   width:70%;
   height:70%;
   overflow:hidden;
+  margin:10px 0;
 }
 .ul_list{
   list-style: none;
@@ -112,5 +116,9 @@ li{
   font-size:15px;
   font-weight:300;
   color:#333;
+}
+.img{
+  width:200px;
+  height:200px;
 }
 </style>

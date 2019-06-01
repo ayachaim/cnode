@@ -73,7 +73,7 @@ export default {
 
 }
 </script>
-<style >
+<style scoped>
 .img{
   width:30px;
   height:30px;
@@ -125,7 +125,7 @@ border-radius: 1px;
   display:inline;
   color:#333;
   vertical-align: middle;
-  width:100%;
+
   line-height: 30px;
   font-size:15px;
   text-overflow:ellipsis;
@@ -136,7 +136,6 @@ border-radius: 1px;
 }
 .wapper_li{
   position:relative;
-
 }
 .time{
   color:#333;
@@ -144,9 +143,9 @@ border-radius: 1px;
   white-space: nowrap;
   line-height: 30px;
   font-size:15px;
-  text-align: right;
+  right:2px;
   position:absolute;
-  right:0;
+
   margin:0 4px;
 }
 
